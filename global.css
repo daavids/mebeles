@@ -1,0 +1,114 @@
+body, html {
+	min-height: 100%;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	padding: 50px 0px;
+	color: rgb(0, 100, 0);
+	background-image: url("img/bg.jpeg");
+}
+/* navbar */
+.logo {
+	width: 50px !important;
+	height: 100%;
+}
+
+.menu {
+	width: 80px !important;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.w3-top {
+	height: 50px;
+	background-color: rgb(0, 100, 0);
+}
+
+.w3-row {
+	height: 100%;
+}
+
+.title {
+	line-height: 46px;
+	padding-right: 80px;
+}
+
+.w3-bar-block a, .title, .w3-row button {
+	height: 46px;
+	color: white;
+}
+
+.title, .w3-row button {
+	margin: 2px 5px;
+	text-align: center !important;
+}
+
+.w3-bar-block a {
+	background-color: rgb(0, 100, 0);
+}
+
+.w3-row button {
+	background-color: rgb(0, 100, 0);
+	border: 2px solid white;
+	border-radius: 5px;
+}
+
+.w3-bar-block a:hover, .w3-row button:hover {
+	background-color: whitesmoke;
+	color: black;
+}
+/* navbar /> */
+/* content */
+.w3-content {
+	margin: 0px auto;
+	min-height: 100%;
+	background-color: white;
+	text-align: justify;
+}
+
+.bannerDiv h3{
+	font-weight: bold;
+	width: 100%;
+	margin: 0;
+}
+
+.mainDiv {
+	padding: 1%;
+}
+.w3-half, .w3-quarter {
+	margin-bottom: 10px;
+}
+/* content /> */ 
+/* footer */
+.footer {
+	height: 50px;
+	background-color: rgb(0, 100, 0);
+	color: white;
+	padding: 0px;
+}
+.footer a.fa {	
+	transform: translateY(30%);
+	margin-left: 5px; 
+}
+.footerMenu {
+	width: 80px;
+	margin-right: 7px;
+}
+.footerMenu:hover * {
+	bottom: 100% !important;
+	right: -7px !important;
+	width: 240px;
+}
+.footer .w3-bar-block {
+	border: 2px solid rgb(0, 100, 0);
+}
+hr {
+	height: 1px !important;
+	width: 100%;
+	background-color: rgb(0, 100, 0);
+}
+/* footer /> */

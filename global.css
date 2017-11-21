@@ -11,18 +11,27 @@ body {
 	color: rgb(0, 100, 0);
 	background-image: url("img/bg.jpeg");
 }
+
+a {
+	text-decoration: none !important;
+}
+
+hr {
+	height: 1px !important;
+	width: 100%;
+	background-color: rgb(0, 100, 0);
+}
+
+h4 {
+	padding: 0px 16px;
+}
+
 /* navbar */
 .logo {
 	width: 50px !important;
 	height: 100%;
 }
 
-.menu {
-	width: 80px !important;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
 .w3-top {
 	height: 50px;
 	background-color: rgb(0, 100, 0);
@@ -34,15 +43,45 @@ body {
 
 .title {
 	line-height: 46px;
-	padding-right: 80px;
+	padding-right: 50px;
 }
 
-.w3-bar-block a, .title, .w3-row button {
+.menuLink, .menu {
+	width: 80px !important;
+	transform: translateY(-50px); /* position in header */
+}
+
+.menuLink {
+	line-height: 44px;
+	font-size: 16px;
+}
+
+.subMenu, .subMenuContent > a{
+	background-color: rgb(0, 100, 0) !important;
+	color: white;
+}
+
+@media (min-width: 601px) {
+	.menu {
+		margin-right: 7px;
+	}
+}
+
+@media (max-width: 600px) {
+	.menu:hover .subMenuContent{
+		display: none;
+	}
+	.subMenu:hover .subMenuContent {
+		display: block;
+	}
+}
+
+.w3-bar-block a, .title, .w3-row button, .menuLink {
 	height: 46px;
 	color: white;
 }
 
-.title, .w3-row button {
+.title, .w3-row button, .menuLink {
 	margin: 2px 5px;
 	text-align: center !important;
 }
@@ -51,20 +90,21 @@ body {
 	background-color: rgb(0, 100, 0);
 }
 
-.w3-row button {
+.w3-row button, .menuLink {
 	background-color: rgb(0, 100, 0);
 	border: 2px solid white;
 	border-radius: 5px;
 }
 
-.w3-bar-block a:hover, .w3-row button:hover {
-	background-color: whitesmoke;
+.w3-bar-block a:hover, .w3-row button:hover, .menuLink:hover, .subMenu:hover, .subMenu:hover > a {
+	background-color: whitesmoke !important;
 	color: black;
 }
 /* navbar /> */
 /* content */
-.w3-content {
-	margin: 0px auto;
+.w3-threequarter {
+	margin: 0px auto !important;
+	float: none !important; /* override w3css */
 	min-height: 100%;
 	background-color: white;
 	text-align: justify;
@@ -94,21 +134,22 @@ body {
 	transform: translateY(30%);
 	margin-left: 5px; 
 }
-.footerMenu {
-	width: 80px;
-	margin-right: 7px;
+
+@media (max-width: 600px) and (orientation: landscape) {
+	.footer{
+		display: none;
+	}
 }
-.footerMenu:hover * {
-	bottom: 100% !important;
-	right: -7px !important;
-	width: 240px;
-}
-.footer .w3-bar-block {
-	border: 2px solid rgb(0, 100, 0);
-}
-hr {
-	height: 1px !important;
-	width: 100%;
-	background-color: rgb(0, 100, 0);
+
+.footer p {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	padding-left: 110px;
+	min-width: 320px;
+	padding-right: 10px
 }
 /* footer /> */
+
